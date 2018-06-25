@@ -18,7 +18,6 @@ public interface ICatRepoDAO extends CrudRepository<Cat, Integer>{
 	@Transactional
 	@Modifying
 	@Query("update Cat c set c.name=:name where c.id=:id")
-	Cat updateCat(@Param("id") int id, @Param("name") String name);
-	
+	void updateCat(@Param("id") int id, @Param("name") String name);
 	
 }
