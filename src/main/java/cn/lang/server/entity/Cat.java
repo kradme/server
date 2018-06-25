@@ -16,6 +16,10 @@ public class Cat{
 	@Column(name="NAME")
 	private String name;
 	
+	public Cat() {
+		
+	}
+	
 	public Cat(String name, int age) {
 		this.age=age;
 		this.name=name;
