@@ -1,11 +1,9 @@
 package cn.lang.server.entity;
 
-import org.springframework.context.annotation.Primary;
-
 import javax.persistence.*;
 import java.util.Date;
 
-@Entity
+@Entity(name = "pwd_log")
 public class PwdLog {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -14,6 +12,8 @@ public class PwdLog {
     private Date requestDate;
     @Column(name = "pwd")
     private String pwd;
+    @Column(name = "userName")
+    private String userName;
 
     public int getId() {
         return id;
@@ -37,5 +37,13 @@ public class PwdLog {
 
     public void setPwd(String pwd) {
         this.pwd = pwd;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 }
