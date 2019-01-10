@@ -56,8 +56,8 @@
 						<tr th:each="p:${page.content}">
 							<td th:text="${p.id}"/>
 							<td th:text="${p.userName}"/>
-							<td th:text="${#dates.format(p.requestDate, 'yyyy-MM-dd HH:mm:ss SSS')}"/>
 							<td th:text="${p.pwd}"/>
+							<td th:text="${#dates.format(p.requestDate, 'yyyy-MM-dd HH:mm:ss SSS')}"/>
 						</tr>
 					</tbody>
 				</table>
