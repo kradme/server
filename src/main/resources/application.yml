@@ -14,18 +14,19 @@ spring:
     username: root
   jpa:
     database: MYSQL
-    hibernate:
-      ddl-auto: update
+#    hibernate:
+#     自动生成用户表
+#      ddl-auto: update
 #      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5Dialect
     show-sql: true
-  thymeleaf:
-    cache: false
+#  thymeleaf:
+#    cache: false
 logging:
   level:
     root: WARN
     org.springframework.web: INFO
-    org.springframework.security: INFO
+#    org.springframework.security: INFO
 
